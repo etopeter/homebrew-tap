@@ -8,6 +8,7 @@ class KubectlViewUtilization < Formula
   depends_on "gawk" => :recommended
 
   def install
-    bin.install "kubectl-view-utilization"
+    system "mv kubectl-view-utilization kubectl-view_utilization"
+    bin.install "kubectl-view_utilization"
   end
 end
